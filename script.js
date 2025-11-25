@@ -75,19 +75,20 @@ function changeContent(id) {
     links.innerHTML = listItems[id][2];
 }
 
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  const arrow = btn.querySelector(".arrow-icon");
+  const collapse = document.querySelector(btn.dataset.bsTarget);
 
+  collapse.addEventListener("shown.bs.collapse", () => arrow.classList.add("rotate"));
+  collapse.addEventListener("hidden.bs.collapse", () => arrow.classList.remove("rotate"));
+});
 
 
 // Card Animation
 let effectIndex = 0;
 const bgcolor1 = '#4F149A', bgcolor2 = '#CFA9FF', bgcolor3 = '#7646D7';
 const originalContent = [];
-const effects = [
-    effect1,
-    effect2,
-    effect3,
-    effect4
-];
+const effects = [ effect1, effect2, effect3, effect4 ];
 
 function getAllCards() {
     document.querySelectorAll(".card-wrapper").forEach(card => {
@@ -227,3 +228,27 @@ function replaceCardContent(wrapper, newContentHTML, bgcolor) {
     }, 200); // matches transition time
 }
 
+// mouse card swap
+document.querySelectorAll('.image-grid').forEach(el => {
+  let isDown = false;
+  let startX, scrollLeft;
+
+  el.addEventListener('mousedown', e => {
+    isDown = true;
+    startX = e.pageX;
+    scrollLeft = el.scrollLeft;
+  });
+
+  document.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX;
+    const walk = x - startX;
+    el.scrollLeft = scrollLeft - walk;
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDown = false;
+    el.classList.remove('active');
+  });
+});
