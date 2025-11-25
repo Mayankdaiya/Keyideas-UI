@@ -667,7 +667,7 @@ header {
     align-items: center;
     box-shadow: 4px 4px 19px #00000024;
     border-radius: 0.8rem;
-    padding: 4%;
+    padding: 1rem;
 }
 .top-cards {
     background-color: #E8E2FF;
@@ -689,28 +689,52 @@ header {
 .stand-out {
     display: flex;
     align-items: center;
-    grid-column: span 6;
+    grid-column: span 9;
     background: linear-gradient(270deg, #7646D7 0%, #4F149A 100%);
     color: var(--color-text-white);
     box-shadow: 4px 4px 19px #00000024;
     border-radius: 0.8rem;
-    padding: 2rem 1rem;
+    padding: 3% 1%;
+}
+.section5b > .stand-out2 { 
+    display: none;
+    flex-direction: column;
+    flex: 0 0 98%;
+    background: linear-gradient(270deg, #7646D7 0%, #4F149A 100%);
+    color: var(--color-text-white);
+    box-shadow: 4px 4px 19px #00000024;
+    border-radius: 0.8rem;
+    padding: 3% 3%;
+    gap: 2rem;
 }
 .stand-out img {
     width: auto;
     height: 2.4rem;
     background-size: contain;
     background-repeat: no-repeat;
+    padding: 0 0.8rem 0 1rem;
 }
 .stand-out div {
-    padding: 0rem 0.7rem;
     height: 100%;
 }
 .stand-out span {
     font-size: small;
     padding-top: 1rem;
 }
-
+.show-card {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    background-color: var(--color-neutral);
+    color: var(--color-primary-light);
+    font-size: x-large;
+    font-weight: 600;
+    cursor: grab;
+}
+.show {
+    display: flex;
+}
 /* wide range of varities */
 #section6 {
     display: flex;
@@ -806,8 +830,8 @@ header {
 .project div:nth-child(1){ --x:-11%; --y:40%; } .project div:nth-child(2){ --x:113%; --y:41%; } 
 
 
-.frontend {
-    display: flex !important;
+.section6c > .frontend {
+    display: flex;
 }
 
 
@@ -923,6 +947,7 @@ header {
 .section7c {
     display: none;
     width: 95%;
+    margin: 4% 0;
 }
 .step-card {
     width: 100%;
@@ -953,7 +978,7 @@ header {
 }
 .section8a {
     justify-content: center;
-    height: 35vh;
+    height: 17rem;
     background-color: var(--color-secondary);
 }
 .section8b {
@@ -1028,6 +1053,15 @@ header {
     align-items: center;
     gap: 1rem;
 
+}
+.gridcarrers2 {
+    display: none;
+    width: 60%;
+    height: 30rem;
+    background-image: url("images/design-and-development-career-openings.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
 }
 
 
@@ -1104,6 +1138,80 @@ header {
     .section4a {
         width: 95%;
         text-align: left;
+    }
+    
+    /* ms-5 */
+    .section5a {
+        width: 95%;
+        text-align: left;
+    }
+    .section5b {
+        width: 95%;
+        display: flex;   
+        justify-content: space-between;    
+        flex-wrap: wrap;    
+        gap: 1rem;
+    }
+    .section5b > * {
+        flex: 0 0 48%;     
+        padding: 2%;
+        order: 0;
+        flex-direction: column;
+    }
+    .stand-out {
+        order: 999;          
+        flex: 0 0 98%;      
+    }
+    .section5b > a img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .section5b > a span {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .section5b > .mw {
+        display: none;
+    }
+    .show-more, .section5b > .stand-out2 {
+        display: flex;
+    }
+    .section5b > .stand-out {
+        display: none;
+    }
+
+    /* ms-6 */
+    #section6 > .section5a {
+        width: 95%;
+        text-align: left;
+    }
+    .section6b {
+        width: 95%;
+    }
+    .section6c {
+        height: fit-content;
+    }
+
+    /* ms-8 */
+    .gridimg {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .gridimg img{
+        width: 10.5rem;
+        height: 10.5rem;
+    }
+    .contents8{
+        width: 95%;
+        text-align: left;
+    }
+
+    /* ms-9 */
+    .gridcarrers {
+        display: none;
+    }
+    .gridcarrers2 {
+        display: block;
     }
 }
 
@@ -1184,6 +1292,36 @@ header {
     .section4a {
         width: 70%;
     }
+
+    /* ms-5 */
+    .section5b {
+        width: 90%;
+        display: flex;   
+        justify-content: center;    
+        flex-wrap: wrap;    
+        gap: 1rem;
+    }
+    .section5b > * {
+        display: flex;
+        flex: 0 0 30%;     
+        padding: 2%;
+        order: 0;
+    }
+    .show-card {
+        display: none;
+    }
+    .stand-out {
+        order: 999;          
+        flex: 0 0 94%;      
+    }
+    /* ms-6 */
+    .section6c {
+        height: fit-content;
+    }
+    /* ms-9 */
+    .gridcarrers {
+        width: 90%;
+    }
 }
 /* Laptop / Small Desktop: 1025px – 1299px */
 @media (min-width: 768px) and (max-width: 1299px) {
@@ -1207,6 +1345,6 @@ header {
     .flag:nth-child(6) > div:nth-child(2) { top:160%; transform: translate(-15%,100%); }
 }
 /* Large Desktop: 1300px and above */
-@media (min-width: 1300px) {
-    
+@media (min-width: 1024px) {
+
 }

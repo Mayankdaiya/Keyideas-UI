@@ -252,3 +252,35 @@ document.querySelectorAll('.image-grid').forEach(el => {
     el.classList.remove('active');
   });
 });
+
+// show more-less for mobile-view
+document.querySelector(".show-more").addEventListener('click', () => {
+    document.querySelector(".show-more").style.display = 'none';
+    document.querySelectorAll(".mw").forEach((el)=>{el.style.display = 'flex'});
+    document.querySelector(".show-less").style.display = 'flex';
+});
+document.querySelector(".show-less").addEventListener('click',()=>{
+    document.querySelector(".show-less").style.display = 'none';
+    document.querySelectorAll(".mw").forEach((el)=>{el.style.display = 'none'});
+    document.querySelector(".show-more").style.display = 'flex';
+    document.querySelector(".show-more").scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+// if(window.matchMedia("(min-width: 768px)").matches) {
+//     document.querySelectorAll(".mw").forEach((el)=>{el.style.display = 'flex'});
+//     document.querySelector(".show-more").style.display = 'none';
+//     document.querySelector(".show-less").style.display = 'none';
+// } 
+
+// for icons
+document.querySelectorAll(".section6b > div").forEach((el)=>{
+    el.addEventListener("mouseenter",()=>{
+        showContent(el.getAttribute('data'))
+    });
+})
+
+function showContent(cls) {
+    document.querySelectorAll(".section6c > div").forEach((el)=>{
+        el.style.display = 'none';
+    })
+    document.querySelector(cls).style.display = 'flex';
+}
