@@ -70,6 +70,15 @@ header {
     margin-left: 5px;
     vertical-align: middle;
 }
+#menu-button {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-white);
+    width: fit-content;
+    height: auto;
+    padding: 0.5rem 1rem;
+    text-wrap: nowrap;
+    border-radius: 0.5rem;
+}
 
 /* Grid Animation Styles */
 #section1 {

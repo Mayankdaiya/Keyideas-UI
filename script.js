@@ -274,13 +274,17 @@ document.querySelector(".show-less").addEventListener('click',()=>{
 // for icons
 document.querySelectorAll(".section6b > div").forEach((el)=>{
     el.addEventListener("mouseenter",()=>{
-        showContent(el.getAttribute('data'));
+        showContent(el.getAttribute('data'),el);
     });
 })
 
-function showContent(cls) {
+function showContent(cls,btn) {
     document.querySelectorAll(".section6c > div").forEach((el)=>{
         el.style.display = 'none';
     })
+    document.querySelectorAll(".section6b > div").forEach((el)=>{
+        el.classList.remove('active');
+    })
+    btn.classList.add("active");
     document.querySelector(cls).style.display = 'flex';
 }
