@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
     getAllCards();
-    // setTimeout(startAnimationLoop,2000);
+    setTimeout(startAnimationLoop,2000);
 
     document.getElementById("items").addEventListener("click", (e) => {
         if (e.target.closest("li")) {
@@ -97,23 +97,23 @@ function getAllCards() {
     originalContent.push(
         `<div class="grid-with-logo">
         <div class="crowd-reviews"></div><br>
-        <span class="fs-3 fw-bold">#1</span>
-        <span>ASP.NET<br>Development<br>Company</span>
+        <span class="gh fw-bold">#1</span>
+        <span class="gs">ASP.NET Development Company</span>
         </div>`,
         `<div class="grid-with-logo">
         <div class="crowd-reviews"></div><br>
-        <span class="fs-3 fw-bold">Top 10</span>
-        <span>Web Development<br>Company</span>
+        <span class="gh fw-bold">Top 10</span>
+        <span class="gs">Web Development Company</span>
         </div>`,
         `<div class="grid-with-logo">
         <div class="crowd-reviews"></div><br>
-        <span class="fs-3 fw-bold">Top 3</span>
-        <span>E-Commerce<br>Development<br>Company</span>
+        <span class="gh fw-bold">Top 3</span>
+        <span class="gs">E-Commerce Development Company</span>
         </div>`,
         `<div class="grid-with-logo">
         <div class="clutch"></div><br>
-        <span class="fs-3 fw-bold">Top 1000</span>
-        <span>B2B Companies<br>2018</span>
+        <span class="gh fw-bold">Top 1000</span>
+        <span class="gs">B2B Companies 2018</span>
         </div>`
     );
 }
