@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
     getAllCards();
-    setTimeout(startAnimationLoop,2000);
+    // setTimeout(startAnimationLoop,2000);
 
     document.getElementById("items").addEventListener("click", (e) => {
         if (e.target.closest("li")) {

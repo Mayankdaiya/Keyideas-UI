@@ -11,11 +11,15 @@
     --font-size-base: 16px;
 }
 body {
+    margin: 0;
+    padding: 0;
     font-family: poppins, sans-serif;
     scroll-behavior: smooth;
     background-color: var(--color-text-white);
 }
-
+* {
+    box-sizing: border-box;
+}
 
 
 /* Common tags */
@@ -76,27 +80,24 @@ header {
 }
 
 #section1-text {
-    width: 40%;
     display: flex;
     align-items: center;
     justify-content: end;
 }
 .s1-text {
-    /* width: 65%; */
-    padding-left: 10%;
+    padding-left: 3rem;
 }
 .s1-text h2 {
     font-size: 3rem;
 }
-
-#section1-grid {
-    width: 60%;
+.s1-text span {
+    font-size: 1rem;
 }
 
 #award-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 13rem);
+    grid-template-rows: repeat(3, 15rem);
     text-align: center;
 }
 #award-grid > div {
@@ -105,11 +106,12 @@ header {
     transition: transform 0.8s ease, background-color 0.8s ease, opacity 0.8s ease;
     will-change: transform, opacity, background-color;
 }
-
-#award-grid>div {
-    height: 16.5rem;
+.gh {
+    font-size: x-large;
 }
-
+.gs {
+    font-size: medium;
+}
 .grid-with-logo {
     height: 100%;
     width: 100%;
@@ -124,41 +126,45 @@ header {
     width: auto;
     height: 3.5rem;
 }
+.grid-with-logo > :last-child {
+    padding: 0.5rem;
+    font-weight: 500;
+}
 .crowd-reviews {
     background-image: url('images/home-banner-sprite-logos.webp');
-    background-position: -7% 35%;
-    width: 195px;
-    height: 50px;
+    background-position: -7% 36%;
+    width: 10.5rem;
+    height: 2.5rem;
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: 11.6rem;
 }
 .good-firms {
     background-image: url('images/home-banner-sprite-logos.webp');
-    background-position: 18% 88%;
-    width: 80px;
-    height: 70px;
+    background-position: 20% 87%;
+    width: 4rem;
+    height: 3.5rem;
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 320%;
+    background-size: 14rem;
 }
 .clutch {
     background-image: url('images/home-banner-sprite-logos.webp');
-    background-position: -13% 60%;
-    width: 132px;
-    height: 65px;
+    background-position: -1% 61%;
+    width: 7rem;
+    height: 3rem;
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 136%;
+    background-size: 10rem;
 }
 .microsoft {
     background-image: url('images/home-banner-sprite-logos.webp');
-    background-position: 73% -2%;
-    width: 170px;
-    height: 70px;
+    background-position: 35% -1%;
+    width: 10rem;
+    height: 4rem;
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 98%;
+    background-size: 10rem;
 }
 
 
@@ -1226,23 +1232,115 @@ header {
 
 /* footer */
 footer {
-    background-image: url(https://www.keyideasinfotech.com/wp-content/uploads/2024/06/footer-background.webp);
+    background-image: url("images/footer-background.webp");
     padding-top: 8rem;
     padding-bottom: unset;
-    background-position: center center;
+    background-repeat: no-repeat;   
+    background-size: cover;           
+    background-position: center;  
     color: var(--color-text-white);
 }
 footer > :first-child {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 }
 #services {
-    padding-left: 3%;
+    padding: 0 2%;
 }   
 #fbuttons {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2%;
+    /* position: relative; */
+}
+.footer-btn {
+    border-radius: 0.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-text-white);
+    background: linear-gradient(rgb(129, 50, 255) 0px, rgb(87, 30, 178) 11.4%, rgb(87, 30, 178) 88.4%, rgb(47, 0, 122) 100%);
+    padding: 0.5rem;
+}
+#fcontent {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15%;
+}
+#services a {
+    font-size: 1rem;
+    color: var(--color-text-white);
+    font-weight: bold;
+}
+.apply-now {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 10px;
+    color: rgba(47, 0, 122, 0.92);
+    background: linear-gradient(rgb(255, 255, 255) 0px, rgb(245, 244, 245) 11.4%, rgb(227, 209, 255) 88.4%, rgb(205, 181, 245) 100%);
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+#fcontent > div div{
+    margin-top: 1rem;
+}
+#services > :last-child {
+    margin-top: 1.5rem;
+}
+
+#about {
+    width: 45%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3% 2%;
+}
+#about p {
+    margin-top: 2%;
+    font-size: small;
+    font-weight: 300;
+}
+#about > div {
+    display: flex;
+}
+#about > div > div {
+    margin-right: 5%;
+}
+
+footer > :last-child {
+    border-top: 2px solid #fffFFF14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > :last-child a {
+    font-size: small;
+    color: var(--color-text-white);
+}
+.social-links {
+    display: flex;
+    width: 40%;
+    gap: 1rem;
+}
+.social-links a{
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    background-image: url("images/social-icon-footer-sprite.webp");
+    background-size: 22rem;   
+    background-position: var(--a) 46%;
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+.ilinkedin {--a: 2.8%;}
+.ibehance { background-size: 20rem !important; --a: 26.8%;}
+.itwitter {--a: 50.2%;}
+.ifacebook {--a: 74%;}
+.iinstagram {--a: 96.5%;}
+.other-links {
+    display: flex;
     gap: 1rem;
 }
 
@@ -1275,7 +1373,7 @@ footer > :first-child {
 
     /* ms-3 */
     .image-grid {
-        width: 100%;
+        width: 95%;
         margin-left: 5%;
         grid-template-columns: none;
         grid-auto-columns: 70%;
@@ -1310,7 +1408,8 @@ footer > :first-child {
         display: flex;   
         justify-content: space-between;    
         flex-wrap: wrap;    
-        gap: 1rem;
+        gap: 2%;
+        row-gap: 1rem;
     }
     .section5b > * {
         flex: 0 0 48%;     
@@ -1318,17 +1417,21 @@ footer > :first-child {
         order: 0;
         flex-direction: column;
     }
+    .section5 > a > div {
+        width: 60%;
+    }
     .stand-out {
         order: 999;          
         flex: 0 0 98%;      
     }
     .section5b > a img {
-        width: 15rem;
-        height: 15rem;
+        width: 100%;
+        height: auto;
     }
     .section5b > a span {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: medium;
+        margin-top: 3%;
     }
     .section5b > .mw {
         display: none;
@@ -1365,6 +1468,10 @@ footer > :first-child {
         width: 95%;
         text-align: left;
     }
+    .section6c > div > div {
+        width: 12rem;
+        height: 6rem;
+    }
 
     /* ms-9 */
     .gridcarrers {
@@ -1385,15 +1492,101 @@ footer > :first-child {
         margin-top: 2rem;
         gap: 2rem;
     }
+
+    /* footer */
+    footer {
+        padding-top: 1.5rem;
+    }
+    footer > div {
+        flex-direction: column;
+    }
+    #about {
+        width: 100%;
+    }
+    #fbuttons::after, #services > :last-child::after, #about > p::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fffFFF14;
+        margin: 1rem auto;
+    }
+    .social-icons {
+        width: auto;
+        justify-content: center;
+    }
+
+    /* ms-1 */
+    #section1 {
+        display: flex;
+        flex-direction: column;
+    }
+    #section1-text {
+        order: 1;
+        justify-content: start;
+        padding: 3% 0;
+    }
+    .s1-text h2 {
+        font-size: large !important;  
+    }
+    .gh {
+        font-size: medium !important;
+    }
+    .gs {
+        font-size: x-small !important;
+    }
+    #award-grid {
+    width: 100%;
+    grid-template-columns: repeat(4,1fr) !important;
+    grid-template-rows: repeat(3,1fr);
+   }  
+    .crowd-reviews {
+        width: 75%;
+        height: 20%;
+        background-size: 8.5rem;
+    }
+    .microsoft {
+        width: 80%;
+        height: 40%;
+        background-size: 8.7rem;
+    }
+    .good-firms {
+        width: 29%;
+        height: 32%;
+        background-size: 11rem;
+    }
+    .clutch {
+        width: 58%;
+        height: 32%;
+        background-size: 9rem;
+    }
 }
 
 @media (max-width:1024px){
-    #section1 {
-        flex-direction: column-reverse;
-    }
-    #section1-text, #section1-grid {
-        width: 100%;
-    }
+
+    /* ms-1 */
+   #award-grid > div{
+    aspect-ratio: 1/1;
+   }
+   #award-grid br {
+    display: none;
+   }
+   .gh {
+    font-size: large;
+   }
+   .gs {
+    font-size: small;
+    padding: 0 0.5rem 0.5rem 0.5rem !important;
+   }
+   .bl-border {
+    border-bottom-left-radius: 1.5rem;
+   }
+   .s1-text {
+    padding-left: 1rem;
+   }
+   .s1-text h2 {
+    font-size: x-large;
+   }
 
     /* ms-11 */
     .section11 {
@@ -1404,6 +1597,9 @@ footer > :first-child {
         margin: 4% 0 0 0;
         border-radius: 0.5rem;
     }
+    .section11b {
+        margin-bottom: 4% !important;
+    }
 
 }
 /* Tablet: 768px – 1024px */
@@ -1411,27 +1607,31 @@ footer > :first-child {
     html {
         font-size: 15px;
     }
-   /* homepage-grid */
-   #award-grid > div {
-        height: 14rem;
+   /* ms-1 */
+   #award-grid {
+    width: 100%;
+    grid-template-columns: repeat(4,9.9rem) !important;
+    grid-template-rows: repeat(3,1fr);
    }
    .clutch {
-        width: 7.5rem;
-        height: 3.2rem;    
+        width: 4.2rem;
+        height: 2rem;
+        background-size: 6rem;   
    }
    .good-firms {
-        width: 4rem;
-        height: 3.1rem;
+        width: 3rem;
+        height: 2.5rem;
+        background-size: 11rem;
    }
    .microsoft {
-        width: 11rem;
-        height: 4.8rem;
+        width: 9rem;
+        height: 3.5rem;
+        background-size: 8rem;
    }
    .crowd-reviews {
-        width: 9rem;
-        height: 2.5rem;
-        background-size: 109%;
-   }     
+        width: 9.5rem;
+        background-size: 10.5rem;
+   }   
 
     /* ms-2 */
     #s2a {
@@ -1450,7 +1650,7 @@ footer > :first-child {
 
     /* ms-3 */
     .image-grid {
-        width: 100%;
+        width: 95%;
         margin-left: 5%;
         grid-template-columns: none;
         grid-auto-columns: 45%;
@@ -1511,6 +1711,14 @@ footer > :first-child {
 }
 /* Laptop / Small Desktop: 1025px – 1299px */
 @media (min-width: 768px) and (max-width: 1299px) {
+    /* ms-1 */
+    .s1-text {
+        padding-left: 1.5rem;
+    }
+    #award-grid {
+        grid-template-columns: repeat(4, 11rem);
+    }
+
     /* arrow-card */
     .section7b {
         grid-template-columns: repeat(3, 1fr); 
