@@ -274,7 +274,7 @@ document.querySelector(".show-less").addEventListener('click',()=>{
 // for icons
 document.querySelectorAll(".section6b > div").forEach((el)=>{
     el.addEventListener("mouseenter",()=>{
-        showContent(el.getAttribute('data'))
+        showContent(el.getAttribute('data'));
     });
 })
 

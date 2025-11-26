@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css');
 
 :root {
@@ -1067,25 +1067,185 @@ header {
 
 /* section 10 */
 #section10 {
-    padding: 2rem;
     margin-top: 4%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
 }
 .section10a {
-    width: 90%;
+    width: 60%;
 }
-.section10a img{
+.s10a2 {
+    border: 2px solid var(--color-secondary);
+    border-radius: 1rem;
+}
+.section10b {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 6%;
+}
+.section10b > :first-child a{
+    color: var(--color-primary-dark);
+    font-weight: bold;
+    font-size: large;
+    margin-left: 1rem;
+}
+.faqs {
+    margin: 1.5% 0;
+    /* border-radius: ; */
+}
+.faqs .content {
+    padding: 1rem;
+    background-color: var(--color-secondary);
+}
+.btn2 {
+    padding: 2.5rem 1.5rem;
+    background-color: var(--color-text-white);
+    border-radius: 0;
+    border-bottom: 2px solid var(--color-secondary);
+}
+.faq8 .btn2 {
+    border: none;
+}
+.section10b img{
     margin-left: 0.5rem;
     transform: rotate(270deg);
 }
-.s10b2 {
-    width: 40%;
+.s10b {
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-image: url(images/faqs.webp);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 35px 40px;
-    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
 }
+.btn3 {
+    width: 80%;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color: var(--color-primary-dark);
+    font-size: large;
+    font-weight: bold;
+}
+#faqclutch {
+    position: relative;
+}
+#faqclutch::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(images/award-sparite.webp);
+    background-position: 9% 85%;
+    background-size: 15rem;
+    background-repeat: no-repeat;
+}
+.btn3 a {
+    color: var(--color-text-white);
+}
+.subhead {
+    font-size: large;
+    color: var(--color-primary-light);
+}
+
+
+/* section-11 */
+.section11 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #EBE2FB, #FFFFFF);;
+}
+.section11 > div {
+    width: 45%;
+    height: 10rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4% 0;
+}
+.section11a {
+    background-color: var(--color-text-white);
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
+.section11a > :first-child {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    gap: 0.7rem;
+}
+.sno {
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 6px;
+    text-align: center;
+    padding: 0 1rem;
+    width: fit-content;
+    font-size: x-large;
+}
+.section11a > :last-child {
+    border-left: 1px solid var(--color-text-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    gap: 0.7rem;
+    padding-left: 1rem;
+}
+.section11b {
+    background: linear-gradient(90deg, rgb(79, 20, 154) 0px, rgb(54, 19, 98) 100%);
+    color: var(--color-text-white);
+    font-weight: bold;
+}
+.section11b button {
+    background-color: var(--color-text-white);
+    color: var(--color-primary-dark);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: fit-content;
+    text-wrap: nowrap;
+    font-weight: 600;
+}
+
+
+/* footer */
+footer {
+    background-image: url(https://www.keyideasinfotech.com/wp-content/uploads/2024/06/footer-background.webp);
+    padding-top: 8rem;
+    padding-bottom: unset;
+    background-position: center center;
+    color: var(--color-text-white);
+}
+footer > :first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#services {
+    padding-left: 3%;
+}   
+#fbuttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 
 /* media query */
 /* Mobile: below 768px */
@@ -1213,6 +1373,18 @@ header {
     .gridcarrers2 {
         display: block;
     }
+
+    /* ms-10 */
+    #section10 {
+        flex-direction: column;
+    }
+    #section10 > div {
+        width: 100%;
+    }
+    .section10b {
+        margin-top: 2rem;
+        gap: 2rem;
+    }
 }
 
 @media (max-width:1024px){
@@ -1223,6 +1395,15 @@ header {
         width: 100%;
     }
 
+    /* ms-11 */
+    .section11 {
+        flex-direction: column;
+    }
+    .section11 > div {
+        width: 95%;
+        margin: 4% 0 0 0;
+        border-radius: 0.5rem;
+    }
 
 }
 /* Tablet: 768px – 1024px */
@@ -1321,6 +1502,11 @@ header {
     /* ms-9 */
     .gridcarrers {
         width: 90%;
+    }
+    /* ms-10 */
+    .btn3 {
+        font-size: medium;
+        width: 100%;
     }
 }
 /* Laptop / Small Desktop: 1025px – 1299px */
