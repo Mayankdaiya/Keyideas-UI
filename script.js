@@ -2,6 +2,16 @@ window.addEventListener("load", () => {
     getAllCards();
     setTimeout(startAnimationLoop,2000);
 
+
+    // hamburger
+    const ham = document.querySelector(".ham");
+    const menu = document.querySelector(".ham-content");
+    document.getElementById("ham-toggle").addEventListener('change', () => {
+        const isshow = menu.classList.toggle("shw");
+        if(isshow) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = '';
+    });
+
     document.getElementById("items").addEventListener("click", (e) => {
         if (e.target.closest("li")) {
             document.querySelectorAll("#items li").forEach(li => li.classList.remove("active"));
@@ -9,6 +19,40 @@ window.addEventListener("load", () => {
             changeContent(e.target.closest('li').id);
         }
     });
+
+    // for header transition smooth
+    const header = document.querySelector("header");
+    let hasScrolledFromTop = false;
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 5 && !hasScrolledFromTop) {
+            // User is leaving the top of the page → trigger animation
+            header.classList.add("scroll-animate");
+            header.classList.add("end");
+            setTimeout(() => {
+                header.classList.remove("scroll-animate"); // slide back down
+            }, 500); // match CSS transition
+
+            hasScrolledFromTop = true; // mark that user left top
+        } else if (currentScroll <= 5) {
+            // User returned to top → reset so animation can happen again
+            hasScrolledFromTop = false;
+            header.classList.remove("end");
+        }
+    });
+
+    // for listitems
+    const listItems = document.querySelectorAll("#list-items li");
+    listItems.forEach(item => {
+        item.addEventListener("click", () => {
+            const li = document.getElementById(item.getAttribute('data'));
+            if(getComputedStyle(li).display == 'none'){
+                li.style.display = 'flex';
+            } else li.style.display = 'none';
+            item.classList.toggle("open"); // toggle on/off
+        });
+    });
+
 });
 
 // List item change
@@ -96,24 +140,32 @@ function getAllCards() {
     });
     originalContent.push(
         `<div class="grid-with-logo">
-        <div class="crowd-reviews"></div><br>
+        <div class="crowd-reviews"></div>
+        <div class="card-content">
         <span class="gh fw-bold">#1</span>
         <span class="gs">ASP.NET Development Company</span>
+        </div>
         </div>`,
         `<div class="grid-with-logo">
-        <div class="crowd-reviews"></div><br>
+        <div class="crowd-reviews"></div>
+        <div class="card-content">
         <span class="gh fw-bold">Top 10</span>
         <span class="gs">Web Development Company</span>
+        </div>
         </div>`,
         `<div class="grid-with-logo">
-        <div class="crowd-reviews"></div><br>
+        <div class="crowd-reviews"></div>
+        <div class="card-content">
         <span class="gh fw-bold">Top 3</span>
         <span class="gs">E-Commerce Development Company</span>
+        </div>
         </div>`,
         `<div class="grid-with-logo">
-        <div class="clutch"></div><br>
+        <div class="clutch"></div>
+        <div class="card-content">
         <span class="gh fw-bold">Top 1000</span>
         <span class="gs">B2B Companies 2018</span>
+        </div>
         </div>`
     );
 }
@@ -255,14 +307,16 @@ document.querySelectorAll('.image-grid').forEach(el => {
 
 // show more-less for mobile-view
 document.querySelector(".show-more").addEventListener('click', () => {
-    document.querySelector(".show-more").style.display = 'none';
-    document.querySelectorAll(".mw").forEach((el)=>{el.style.display = 'flex'});
-    document.querySelector(".show-less").style.display = 'flex';
+    console.log("lskd");
+    document.querySelector(".show-more").classList.toggle("show");
+    document.querySelectorAll(".mw").forEach((el)=>{el.classList.toggle("show")});
+    document.querySelector(".show-less").classList.toggle("show");
 });
 document.querySelector(".show-less").addEventListener('click',()=>{
-    document.querySelector(".show-less").style.display = 'none';
-    document.querySelectorAll(".mw").forEach((el)=>{el.style.display = 'none'});
-    document.querySelector(".show-more").style.display = 'flex';
+    console.log("clicked");
+    document.querySelector(".show-less").classList.toggle("show");
+    document.querySelectorAll(".mw").forEach((el)=>{el.classList.toggle("show")});
+    document.querySelector(".show-more").classList.toggle("show");
     document.querySelector(".show-more").scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 // if(window.matchMedia("(min-width: 768px)").matches) {

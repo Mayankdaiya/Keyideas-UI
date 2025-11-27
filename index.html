@@ -10,33 +10,167 @@
 
 <body>
     <header>
-        <div>
-            <div id="logo"></div>
-        </div>
-        <nav>
+        <nav id="nav1">
+            <div>
+                <div id="logo"></div>
+            </div>
             <ul id="list-items">
-                <li>
-                    <a href="#">Companies</a>
-                    <span class="down-menu-icon"></span>
+                <li data="companines">
+                    <a href="#">Companies<span class="down-menu-icon"></span></a>
                 </li>
-                <li>
-                    <a href="#">Case Studies</a>
-                    <span class="down-menu-icon"></span>
+                <li data="case-studies">
+                    <a href="#">Case Studies<span class="down-menu-icon"></span></a>
                 </li>
-                <li>
-                    <a href="#">Industries</a>
-                    <span class="down-menu-icon"></span>
+                <li data="industries">
+                    <a href="#">Industries<span class="down-menu-icon"></span></a>
                 </li>
-                <li>
-                    <a href="#">We're Hiring</a>
-                    <span class="down-menu-icon"></span>
+                <li class="hiring">
+                    <a href="https://www.keyideasinfotech.com/contact-us/" target="_blank">We're Hiring</a>
                 </li>
                 <li>
                     <button id="menu-button">Let's Talk</button>
                 </li>
             </ul>
         </nav>
+        <nav id="nav2">
+            <div>
+                <div id="logo"></div>
+            </div>
+            <label class="ham">
+                <input type="checkbox" id="ham-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </nav>
+        <div class="ham-content" >
+            <div>
+                <a>Company <b>+</b></a>
+                <a>Case Studies <b>+</b></a>
+                <a>Industries <b>+</b></a>
+                <a>We're Hiring <b>+</b></a>
+            </div>
+            <div>
+                <p>Get In Touch</p>
+                <b>sales@keyideas.com</b>
+                <div class="socialicons">
+                    <a class="i1"></a>
+                    <a class="i2"></a>
+                    <a class="i3"></a>
+                    <a class="i4"></a>
+                    <a class="i5"></a>
+                </div>
+            </div>
+        </div>
+
     </header>
+    <div id="industries">
+        <div class="tech-stack">
+            <div data="ASP.NET"></div>
+            <div data="C#"></div>
+            <div data="Laravel"></div>
+            <div data="NodeJs"></div>
+            <div data="Angular"></div>
+            <div data="JQuery"></div>
+            <div data="Nextjs"></div>
+            <div data="react"></div>
+            <div data="typescript"></div>
+            <div data="VaueJs"></div>
+            <div data="Android"></div>
+            <div data="iOS"></div>
+            <div data="PWA"></div>
+            <div data="Redux"></div>
+            <div data="MAUI"></div>
+            <div data="MongoDB"></div>
+            <div data="Docker"></div>
+            <div data="Azure"></div>
+            <div data="SQLserver"></div>
+            <div data="AWS"></div>
+        </div>
+        <div class="links-stack">
+            <div class="tech-links">
+                <div>
+                    <a href="#">Automotive & Transportation</a>
+                    <a href="#">Dealers & Distributors</a>
+                    <a href="#">Education</a>
+                    <a href="#">Events & Conference</a>
+                    <a href="#">Fashion E-Commerce</a>
+                    <a href="#">Finance</a>
+                    <a href="#">Food & Beverage</a>
+                    <a href="#">Heavy Equipments</a>
+                </div>
+                <div>
+                    <a href="#">Home & Repair</a>
+                    <a href="#">Industrial</a>
+                    <a href="#">Insurance</a>
+                    <a href="#">Jewelry Website Design</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Local Services</a>
+                    <a href="#">Medical & Health</a>
+                    <a href="#">Non-Profit</a>
+                </div>
+                <div>
+                    <a href="#">Professional Services</a>
+                    <a href="#">Real Estate</a>
+                    <a href="#">Recreation & Entertainment</a>
+                    <a href="#">Retail & E-Commerce</a>
+                    <a href="#">Software</a>
+                    <a href="#">Tech</a>
+                    <a href="#">Tourism & Hospitality</a>
+                </div>
+            </div>
+            <div class="tech-btns">
+                <div>Delivered 111,768+ leads for our client</div>
+                <div>Agility</div>
+                <div>Ingenuity</div>
+                <div>Reliability</div>
+            </div>
+        </div>
+    </div>
+    <div id="case-studies">
+        <div>
+            <div class="b-head">
+                <a href="#">Case Studies <span class="arrow-forward-icon"></span></a>
+                <a href="#">UI UX Gallery <span class="arrow-forward-icon"></span></a>
+            </div>
+            <div class="banner bnr1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <div class="b-head">
+                <a href="#">Awards & recognition <span class="arrow-forward-icon"></span></a>
+            </div>
+            <div class="banner bnr2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div id="companies">
+
+    </div>
 
     <!-- Main Section -->
     <main>
@@ -57,9 +191,11 @@
                     <div id="card2"><!-- <img src="images/clutch-award.webp" alt="Clutch-B2B"><br> -->
                         <div class="card-wrapper">
                             <div class="grid-with-logo">
-                                <div class="crowd-reviews"></div><br>
-                                <span class="gh fw-bold">Top B2B</span>
-                                <span class="gs">Providers in the indian Emerging Tech Market for 2021</span>
+                                <div class="crowd-reviews"></div>
+                                <div class="card-content">
+                                    <span class="gh fw-bold">Top B2B</span>
+                                    <span class="gs">Providers in the indian Emerging Tech Market for 2021</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -72,9 +208,11 @@
                         <div class="card-wrapper">
                             <div class="grid-with-logo">
                                 <!-- <img src="images/goodfirms-award.webp" alt="GoodFirms-Award"><br> -->
-                                <div class="good-firms"></div><br>
-                                <span class="gh fw-bold">Tech Shopify</span>
-                                <span class="gs">Development Companies in 2019</span>
+                                <div class="good-firms"></div>
+                                <div class="card-content">
+                                    <span class="gh fw-bold">Tech Shopify</span>
+                                    <span class="gs">Development Companies in 2019</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -107,9 +245,11 @@
                     <div id="card9">
                         <div class="card-wrapper">
                             <div class="grid-with-logo">
-                                <div class="clutch"></div><br>
-                                <span class="gh fw-bold">Top12</span>
-                                <span class="gs">out of 400 top Mobile App Developers in India, 2020</span>
+                                <div class="clutch"></div>
+                                <div class="card-content">
+                                    <span class="gh fw-bold">Top12</span>
+                                    <span class="gs">out of 400 top Mobile App Developers in India, 2020</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -754,7 +894,7 @@
                     <div><img src="images/img-f.webp" alt="finance"></div>
                     <span>Finance</span>
                 </a>
-                <div class="show-more show-card">
+                <div class="show-more show-card show">
                     <span>Show More</span>
                 </div>
                 <a href="" target="_blank" class="mw">
@@ -1373,12 +1513,18 @@
             <div id="services">
                 <h4>Services</h4>
                 <div id="fbuttons">
-                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/web-design/">Web Design</a></button>
-                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/user-centered-design-agency/">UI Design</a></button>
-                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/application-development/">App Development</a></button>
-                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/graphic-design/">Graphic Design</a></button>
-                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/ecommerce/">E-Commerce Website</a></button>
-                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/digital-marketing/">Digital Marketing</a></button>
+                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/web-design/">Web
+                            Design</a></button>
+                    <button class="footer-btn"><a
+                            href="https://www.keyideasinfotech.com/user-centered-design-agency/">UI Design</a></button>
+                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/application-development/">App
+                            Development</a></button>
+                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/graphic-design/">Graphic
+                            Design</a></button>
+                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/ecommerce/">E-Commerce
+                            Website</a></button>
+                    <button class="footer-btn"><a href="https://www.keyideasinfotech.com/digital-marketing/">Digital
+                            Marketing</a></button>
                 </div>
                 <div id="fcontent">
                     <div>
@@ -1387,8 +1533,10 @@
                         <div><a href="https://www.keyideasinfotech.com/company/">ABOUT</a></div>
                     </div>
                     <div>
-                        <div><a href="https://www.keyideasinfotech.com/careers/">WE'RE HIRING<button class="apply-now">Apply Now</button></a></div>
-                        <div><a href="https://www.keyideasinfotech.com/social-impact-corporate-responsibility/">SOCIAL IMPACT</a></div>
+                        <div><a href="https://www.keyideasinfotech.com/careers/">WE'RE HIRING<button
+                                    class="apply-now">Apply Now</button></a></div>
+                        <div><a href="https://www.keyideasinfotech.com/social-impact-corporate-responsibility/">SOCIAL
+                                IMPACT</a></div>
                         <div><a href="https://www.keyideasinfotech.com/blog/">BLOG</a></div>
                     </div>
                 </div>
@@ -1424,7 +1572,8 @@
         </div>
         <div>
             <div class="social-links">
-                <a class="ilinkedin" href="https://www.linkedin.com/company/keyideas-infotech-p-limited/" target="_blank"></a>
+                <a class="ilinkedin" href="https://www.linkedin.com/company/keyideas-infotech-p-limited/"
+                    target="_blank"></a>
                 <a class="ibehance" href="https://www.behance.net/keyideas/" target="_blank"></a>
                 <a class="itwitter" href="https://twitter.com/keyideasglobal/" target="_blank"></a>
                 <a class="ifacebook" href="https://www.facebook.com/keyideascompany" target="_blank"></a>
