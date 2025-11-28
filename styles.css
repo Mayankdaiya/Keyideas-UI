@@ -1993,6 +1993,9 @@ footer > :last-child a {
     font-size: smaller;
     text-wrap: nowrap;
     }
+    .social-links a {
+        background-size: 16rem !important;
+    }
 
     /* ms-1 */
     #section1 {
